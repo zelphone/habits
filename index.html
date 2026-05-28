@@ -1348,7 +1348,8 @@
               }
               if (user) {
                 appState.user = user;
-                document.getElementById('firebase-logout-btn').classList.remove('hidden');
+                const logoutBtn = document.getElementById('firebase-logout-btn');
+                if (logoutBtn) logoutBtn.classList.remove('hidden');
                 
                 // Fetch dynamic cloud player snapshot
                 const path = `users/${user.uid}`;
@@ -1384,7 +1385,8 @@
                   unsubscribeOnlineStudy();
                 }
                 appState.user = null;
-                document.getElementById('firebase-logout-btn').classList.add('hidden');
+                const logoutBtn = document.getElementById('firebase-logout-btn');
+                if (logoutBtn) logoutBtn.classList.add('hidden');
                 renderAppState();
               }
             });
@@ -1627,7 +1629,8 @@
           // Fallback guest simulator
           window.triggerToast("Guest mode active (Firebase loading...)");
           appState.user = { uid: "GUEST_USER_POMO", displayName: appState.hero_name || "Guest Cadet", photoURL: "" };
-          document.getElementById('firebase-logout-btn').classList.remove('hidden');
+          const logoutBtn = document.getElementById('firebase-logout-btn');
+          if (logoutBtn) logoutBtn.classList.remove('hidden');
           saveStateToStore();
           renderAppState();
           return;
@@ -1638,7 +1641,8 @@
           const result = await signInWithPopup(auth, provider);
           appState.user = result.user;
           window.triggerToast(`Welcome back, ${result.user.displayName}!`);
-          document.getElementById('firebase-logout-btn').classList.remove('hidden');
+          const logoutBtn = document.getElementById('firebase-logout-btn');
+          if (logoutBtn) logoutBtn.classList.remove('hidden');
           
           const path = `users/${result.user.uid}`;
           const userDoc = await getDoc(doc(db, "users", result.user.uid));
@@ -1661,7 +1665,8 @@
           await signOut(auth);
         }
         appState.user = null;
-        document.getElementById('firebase-logout-btn').classList.add('hidden');
+        const logoutBtn = document.getElementById('firebase-logout-btn');
+        if (logoutBtn) logoutBtn.classList.add('hidden');
         window.triggerToast("Logged out successfully");
         saveStateToStore();
         renderAppState();
