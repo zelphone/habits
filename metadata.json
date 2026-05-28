@@ -1,0 +1,6 @@
+{
+  "name": "Pomo & Friends",
+  "description": "A whimsical hand-drawn habit tracker and study game where focus fuels a world of hand-drawn companions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
