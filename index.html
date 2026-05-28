@@ -174,7 +174,7 @@
             
             <!-- Running Cat Asset that rides on the right edge of the fill -->
             <div id="running-cat-avatar" class="absolute top-[-26px] left-[0%] -translate-x-1/2 w-14 h-14 transition-all duration-100 ease-out select-none pointer-events-none">
-              <img src="https://res.cloudinary.com/dspm900s4/image/upload/v1779885567/screen-removebg-preview_29_ov0dnc.png" class="w-full h-full object-contain animate-bounce" alt="Running Pomo Cat" style="animation-duration: 0.6s;" referrerPolicy="no-referrer">
+              <img src="https://res.cloudinary.com/dspm900s4/image/upload/v1779878298/screen_copy_17-removebg-preview_idshis.png" class="w-full h-full object-contain animate-bounce" alt="Running Pomo Cat" style="animation-duration: 0.6s;" referrerPolicy="no-referrer">
             </div>
           </div>
 
@@ -1546,8 +1546,8 @@
             chatLogsEl.innerHTML = `
               <div class="flex flex-col items-center justify-center py-4 gap-2 text-center select-none">
                 <span class="text-gray-400 font-black text-xs">Please log in to join the Friends Hub chat!</span>
-                <button onclick="triggerGoogleLogin()" class="mt-1 bg-white hover:bg-[#faf6f0] border-2 border-[#423f3a] text-gray-800 text-[11.5px] py-1.5 px-4 rounded-xl font-extrabold shadow-[2px_2px_0px_#423f3a] active:translate-y-[1.5px] active:shadow-none cursor-pointer flex items-center gap-2 transition-all">
-                  <img src="https://res.cloudinary.com/dspm900s4/image/upload/v1779934697/google-icon-icon-lg_i6g3lt.png" class="w-4.5 h-4.5 object-contain" alt="Google" referrerPolicy="no-referrer"> Sign In with Google
+                <button onclick="triggerGoogleLogin()" class="mt-1 bg-white hover:bg-[#faf6f0] border-2 border-[#423f3a] text-gray-800 text-[11.5px] py-1.5 px-5 rounded-xl font-extrabold shadow-[2px_2px_0px_#423f3a] active:translate-y-[1.5px] active:shadow-none cursor-pointer flex items-center gap-1.5 transition-all">
+                  Sign In with Google
                 </button>
               </div>
             `;
@@ -2783,7 +2783,7 @@
           if (appState.user && appState.user.uid !== "GUEST_USER_POMO") {
             const displayName = window.escapeHTML ? window.escapeHTML(appState.user.displayName || appState.hero_name || "Doodle Cadet") : (appState.user.displayName || appState.hero_name || "Doodle Cadet");
             const email = window.escapeHTML ? window.escapeHTML(appState.user.email || "No Email linked") : (appState.user.email || "No Email linked");
-            const photoUrl = appState.user.photoURL || "https://res.cloudinary.com/dspm900s4/image/upload/v1779885567/screen-removebg-preview_29_ov0dnc.png";
+            const photoUrl = appState.user.photoURL || "https://res.cloudinary.com/dspm900s4/image/upload/v1779878298/screen_copy_17-removebg-preview_idshis.png";
             
             authContainer.innerHTML = `
               <div class="bg-[#f0faf5] border-2.5 border-[#423f3a] rounded-[22px] p-4.5 mb-3.5 shadow-[4px_4px_0px_#423f3a] space-y-3">
